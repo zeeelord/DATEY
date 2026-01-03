@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -41,15 +40,16 @@ class MyApp extends StatelessWidget {
               onPressed: () {
                 print(" google  is clicked");
               },
-                   child: Image.asset('assets/images/facebook_icon.jpg',width:22, height: 22),
+              child: Image.asset(
+                'assets/images/facebook_icon.jpg',
+                width: 22,
+                height: 22,
+              ),
             ),
           ],
         ),
       ),
     );
-=======
-    return MaterialApp(debugShowCheckedModeBanner: false, home: loginPage());
->>>>>>> 73b862090dcc6c03dfdaa4f55b57476a066056c7
   }
 }
 
