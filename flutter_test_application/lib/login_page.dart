@@ -30,7 +30,14 @@ class loginPage extends StatelessWidget {
               fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
-          TextField(decoration: InputDecoration(hintText: 'Password')),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Password',
+              border: InputBorder.none,
+              filled: true,
+              fillColor: Colors.white.withOpacity(0.5),
+            ),
+          ),
           TextButton(
             onPressed: () {
               print("Clicked");
