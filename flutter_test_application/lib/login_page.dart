@@ -33,38 +33,64 @@ class loginPage extends StatelessWidget {
               fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
+          SizedBox(height: 16),
           TextField(
             decoration: InputDecoration(
               hintText: 'Password',
-              border: InputBorder.none,
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+              ),
             ),
           ),
-          TextButton(
-            onPressed: () {
-              print("Clicked");
-            },
-            child: Text('Forgot password?'),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: () {
+                print("Forgot is Clicked");
+              },
+              style: TextButton.styleFrom(foregroundColor: Colors.white),
+              child: Text('Forgot password?'),
+            ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              print("login is clicked");
-            },
-            child: Text('Log in '),
+          SizedBox(
+            width: 250,
+            child: ElevatedButton(
+              onPressed: () {
+                print("login is clicked");
+              },
+              child: Text('Log in'),
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.amber,
+                foregroundColor: Colors.black,
+              ),
+            ),
           ),
-          Text('Or sign in with'),
+          SizedBox(height: 62),
+          Text('Or sign in with', style: TextStyle(color: Colors.white)),
+          SizedBox(height: 16),
+
           ElevatedButton(
             onPressed: () {
               print(" google  is clicked");
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(50)),
+              ),
+            ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/Google_icon.jpg',
                   height: 22,
                   width: 22,
                 ),
+                SizedBox(width: 12),
                 Text('Login with google'),
               ],
             ),
