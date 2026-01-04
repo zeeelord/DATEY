@@ -25,7 +25,10 @@ class loginPage extends StatelessWidget {
           TextField(
             decoration: InputDecoration(
               hintText: 'Username',
-              border: InputBorder.none,
+              // border: InputBorder.none,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+              ),
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
             ),
