@@ -25,6 +25,7 @@ class loginPage extends StatelessWidget {
               ),
             ),
             Spacer(),
+            // login to contiunue sections
             Text('Login to continue', style: TextStyle(color: Colors.white)),
             TextField(
               decoration: InputDecoration(
@@ -48,6 +49,7 @@ class loginPage extends StatelessWidget {
                 ),
               ),
             ),
+            // forgot password center
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -59,6 +61,7 @@ class loginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 32),
+            // login sections
             SizedBox(
               width: 250,
               height: 48,
@@ -74,6 +77,7 @@ class loginPage extends StatelessWidget {
               ),
             ),
             Spacer(),
+            // sigining in with social medias
             Text('Or sign in with', style: TextStyle(color: Colors.white)),
             SizedBox(height: 16),
             // google button
