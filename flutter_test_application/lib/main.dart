@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
           '/':(context)=>loginPage(),
-          'home':(context)=>Homepage(),
+          '/home':(context)=>Homepage(),
       },
     ); 
   }

@@ -11,7 +11,14 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(child: Text('Home page')) 
+      appBar: AppBar(
+        title: Text("WELCOME"),
+        // backgroundColor: ,
+        actions: [
+          IconButton(onPressed: null, icon: Icon(Icons.location_city))
+        ],
+      ),
+      body: Container()
     );
   }
 }
