@@ -9,6 +9,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,27 +27,15 @@ class _HomepageState extends State<Homepage> {
           IconButton(onPressed: null, icon: Icon(Icons.location_on_outlined)),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            _userItem(),
-            
-            
-        
-        
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: mockUser().length,
+        scrollDirection: Axis.vertical,
+        itemBuilder: (context, index) {
+          return   Column(
+          children: mockUser()
+        );
+        },
+      
       )
     );
   }
@@ -75,4 +64,13 @@ class _HomepageState extends State<Homepage> {
                         ),
   );
  }
+ List<Widget> mockUser(){
+  List<Widget> users =[];
+
+     for (var counter=0; counter <= 1000; counter++){
+      users.add(_userItem());
+     }
+   return users;
+ }
 }
+
