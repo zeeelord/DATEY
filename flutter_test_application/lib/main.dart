@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application/pages/home_page.dart';
 import 'package:flutter_test_application/pages/login_page.dart';
@@ -20,16 +18,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Roboto',
         scaffoldBackgroundColor: AppColors.background,
+        brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
       // home: loginPage(),
       initialRoute: '/',
-      routes:{
-        '/': (context)=> loginPage(),
-       '/home': (context)=> Homepage(),
-       '/main': (context)=> MainPage()
-      }
+      routes: {
+        '/': (context) => loginPage(),
+        '/home': (context) => Homepage(),
+        '/main': (context) => MainPage(),
+      },
     );
   }
 }
-

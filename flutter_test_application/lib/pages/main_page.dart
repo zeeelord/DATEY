@@ -42,7 +42,7 @@ class _MainPageState extends State<MainPage> {
             label: "profile",
           ),
         ],
-        // showSelectedLabels: false,
+        showSelectedLabels: false,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
 
