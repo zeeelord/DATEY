@@ -1,10 +1,11 @@
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test_application/pages/home_page.dart';
 import 'package:flutter_test_application/pages/login_page.dart';
+import 'package:flutter_test_application/pages/main_page.dart';
 import 'package:flutter_test_application/styles/app_colors.dart';
-import 'package:http/http.dart';
+
 // import 'package:flutter_test_application/login_page.dart';
 
 void main() {
@@ -25,10 +26,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes:{
         '/': (context)=> loginPage(),
-       '/home': (context)=> Homepage()
+       '/home': (context)=> Homepage(),
+       '/main': (context)=> MainPage()
       }
     );
   }
 }
-
 

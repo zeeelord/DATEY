@@ -76,7 +76,8 @@ class loginPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // login page shouldn't have a back
-                     Navigator.of(context).pushReplacementNamed('/home');
+                     Navigator.of(context).pushReplacementNamed('/main');
+
                    
                     },
                     style: TextButton.styleFrom(

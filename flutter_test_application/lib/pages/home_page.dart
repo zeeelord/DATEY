@@ -24,7 +24,7 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: AppColors.background,
         // backgroundColor: ,
         actions: [
-          IconButton(onPressed: null, icon: Icon(Icons.location_on_outlined)),
+          IconButton(onPressed: null, icon: Icon(Icons.location_on_outlined, color: AppColors.white,)),
         ],
       ),
       body: ListView.builder(
@@ -73,4 +73,6 @@ class _HomepageState extends State<Homepage> {
    return users;
  }
 }
+
+
 
