@@ -11,15 +11,14 @@ class loginPage extends StatelessWidget {
 
       // drawer: Container(height: 500, width: 400, color: Colors.white),
       // resizeToAvoidBottomInset: false,
-
       body: SingleChildScrollView(
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Padding(
-            padding:  EdgeInsets.all(24),
+            padding: EdgeInsets.all(24),
             child: Column(
               children: [
-                SizedBox(height: 48 ),
+                SizedBox(height: 48),
                 Text(
                   "Hello welcome back!",
                   style: TextStyle(
@@ -31,7 +30,10 @@ class loginPage extends StatelessWidget {
                 ),
                 SizedBox(height: 16),
                 // login to continue sections
-                Text('Login to continue', style: TextStyle(color: Colors.white)),
+                Text(
+                  'Login to continue',
+                  style: TextStyle(color: Colors.white),
+                ),
                 Spacer(),
                 TextField(
                   decoration: InputDecoration(
@@ -44,9 +46,7 @@ class loginPage extends StatelessWidget {
                     fillColor: Colors.white.withOpacity(0.5),
                   ),
                 ),
-                SizedBox(
-                  height: 30 
-                ),
+                SizedBox(height: 30),
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
@@ -76,9 +76,7 @@ class loginPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       // login page shouldn't have a back
-                     Navigator.of(context).pushReplacementNamed('/main');
-
-                   
+                      Navigator.of(context).pushReplacementNamed('/main');
                     },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.amber,
@@ -154,7 +152,9 @@ class loginPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {},
-                      style: TextButton.styleFrom(foregroundColor: Colors.amber),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.amber,
+                      ),
                       child: Text(
                         'Signup',
                         style: TextStyle(decoration: TextDecoration.underline),
@@ -162,9 +162,8 @@ class loginPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                  
-                Spacer()
-          
+
+                Spacer(),
               ],
             ),
           ),
@@ -173,9 +172,3 @@ class loginPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
