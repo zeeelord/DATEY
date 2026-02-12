@@ -11,8 +11,10 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  List<String> users = [];
   @override
   Widget build(BuildContext context) {
+    mockUser();
     return Scaffold(
       appBar: AppBar(
         elevation: 0.5,
@@ -28,21 +30,18 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       body: ListView.builder(
-        itemCount: mockUser().length,
+        itemCount: users.length,
         scrollDirection: Axis.vertical,
         itemBuilder: (context, index) {
-          return Column(children: mockUser());
+          return PostItems(user: users[index]);
         },
       ),
     );
   }
 
-  List<Widget> mockUser() {
-    List<Widget> users = [];
-
-    for (var counter = 0; counter <= 1000; counter++) {
-      users.add(PostItems());
+  mockUser() {
+    for (var counter = 0; counter < 1000; counter++) {
+      users.add("User number $counter");
     }
-    return users;
   }
 }
