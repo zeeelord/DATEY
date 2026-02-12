@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_application/login_page.dart';
 import 'package:flutter_test_application/pages/home_page.dart';
+import 'package:flutter_test_application/pages/login_page.dart';
+import 'package:flutter_test_application/pages/main_page.dart';
 import 'package:flutter_test_application/styles/app_colors.dart';
 
 void main() {
@@ -15,14 +16,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Roboto',
         scaffoldBackgroundColor: AppColors.background,
+        brightness: Brightness.dark,
       ),
       debugShowCheckedModeBanner: false,
       // home: loginPage(),
-      // page route defined
       initialRoute: '/',
       routes: {
-          '/':(context)=>loginPage(),
-          '/home':(context)=>Homepage(),
+        '/': (context) => loginPage(),
+        '/home': (context) => Homepage(),
+        '/main': (context) => MainPage(),
       },
     );
   }
