@@ -47,7 +47,7 @@ class _MainPageState extends State<MainPage> {
         showUnselectedLabels: false,
 
         backgroundColor: Color(0xFFfd809e),
-
+        currentIndex: currentIndex,
         onTap: (index) {
           setState(() {
             currentIndex = index;
